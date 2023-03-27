@@ -1,0 +1,10 @@
+[
+    {
+        "image" : "slide-4.jpeg",
+        "html" : "<h2 class='animate__animated animate__fadeInDown' style='font-size: 25px'>Animals and <span>Birds</span></h2><p class='animate__animated animate__fadeInUp' style='font-size: 70px'>LIFE CARE ORGANIZATION</p><p class='animate__animated animate__fadeInUp'>Improving well being of animals and birds</p><a href='donate.php' class='btn-get-started animate__animated animate__fadeInUp scrollto'>Donate</a>    <a href='#about' class='btn-get-started animate__animated animate__fadeInUp scrollto'>Learn More</a>"
+    },
+    {
+        "image" : "slide-4.jpeg",
+        "html" : " <h2 class='animate__animated animate__fadeInDown' style='font-size: 25px'>Dedicate to</h2><p class='animate__animated animate__fadeInUp' style='font-size: 70px'>Conserving Wild Life</p><p class='animate__animated animate__fadeInUp'>Over the years</p>"
+    }
+]

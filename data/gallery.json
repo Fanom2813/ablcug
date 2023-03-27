@@ -1,0 +1,63 @@
+{
+    "categories": [
+        "Birds",
+        "Animals",
+        "Activities"
+    ],
+    "images" : [
+        {
+            "name" : "img (1)",
+            "image" : "assets/img/portfolio/img (1).jpeg",
+            "category" : "Birds"
+        },{
+            "name" : "img (2)",
+            "image" : "assets/img/portfolio/img (2).jpeg",
+            "category" : "Birds"
+        },{
+            "name" : "img (3)",
+            "image" : "assets/img/portfolio/img (3).jpeg",
+            "category" : "Birds"
+        },{
+            "name" : "img (4)",
+            "image" : "assets/img/portfolio/img (4).jpeg",
+            "category" : "Birds"
+        },{
+            "name" : "img (5)",
+            "image" : "assets/img/portfolio/img (5).jpeg",
+            "category" : "Birds"
+        },{
+            "name" : "img (6)",
+            "image" : "assets/img/portfolio/img (6).jpeg",
+            "category" : "Birds"
+        },{
+            "name" : "img (7)",
+            "image" : "assets/img/portfolio/img (7).jpeg",
+            "category" : "Animals"
+        },{
+            "name" : "img (8)",
+            "image" : "assets/img/portfolio/img (8).jpeg",
+            "category" : "Animals"
+        },{
+            "name" : "img (9)",
+            "image" : "assets/img/portfolio/img (9).jpeg",
+            "category" : "Activities"
+        },
+        {
+            "name" : "img (10)",
+            "image" : "assets/img/portfolio/img (10).jpeg",
+            "category" : "Activities"
+        },{
+            "name" : "img (11)",
+            "image" : "assets/img/portfolio/img (11).jpeg",
+            "category" : "Activities"
+        },{
+            "name" : "img (12)",
+            "image" : "assets/img/portfolio/img (12).jpeg",
+            "category" : "Activities"
+        },{
+            "name" : "img (13)",
+            "image" : "assets/img/portfolio/img (13).jpeg",
+            "category" : "Activities"
+        }
+    ]
+}
