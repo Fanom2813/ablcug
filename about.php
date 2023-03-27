@@ -313,6 +313,22 @@
             </div>
           </div>
 
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/person1.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>DUNCAN PHILLIP MUTOOGO</h4>
+                <span>Deputy Senior Coordinator</span>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
               

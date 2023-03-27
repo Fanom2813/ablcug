@@ -9,6 +9,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.php">Home</a></li>
+          <li><a href="scholarship.php">Scholarship</a></li>
 
           <li class="dropdown"><a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

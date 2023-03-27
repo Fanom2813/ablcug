@@ -6,5 +6,13 @@
     {
         "image" : "slide-4.jpeg",
         "html" : " <h2 class='animate__animated animate__fadeInDown' style='font-size: 25px'>Dedicate to</h2><p class='animate__animated animate__fadeInUp' style='font-size: 70px'>Conserving Wild Life</p><p class='animate__animated animate__fadeInUp'>Over the years</p>"
+    },
+    {
+        "image" : "slide-5.jpg",
+        "html" : ""
+    },
+    {
+        "image" : "slide-6.jpg",
+        "html" : ""
     }
 ]
