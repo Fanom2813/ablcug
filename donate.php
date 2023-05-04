@@ -6,34 +6,34 @@ $donation_data = json_decode($string_json);
 
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-if(isset($_POST['donate'])){
+if (isset($_POST['donate'])) {
 
   // var_dump($_POST);
   // die;
 
-  $amount = (int)$_POST['amount'] > (int)$_POST['other-amount'] ? (int)$_POST['amount'] : (int)$_POST['other-amount'];
+  $amount = (int) $_POST['amount'] > (int) $_POST['other-amount'] ? (int) $_POST['amount'] : (int) $_POST['other-amount'];
 
   // print_r($_POST);
   // die;
 
-  if(!isset($_POST['amount']) && !isset($_POST['other-amount']) || $amount <= 0){
+  if (!isset($_POST['amount']) && !isset($_POST['other-amount']) || $amount <= 0) {
     $error = "Kindly enter or select a valid amount";
-  }else{
+  } else {
 
     $_SESSION['amount'] = $amount;
     $_SESSION['phoneNumber'] = $_POST['phoneNumber'];
 
 
-    header('location: https://api.gmpayapp.com/api/v2/transactions/init?phone='.$_POST['phoneNumber'].'&amount='.$amount.'&return='.$actual_link.'&merchant='.$api_key);
+    header('location: https://api.gmpayapp.com/api/v2/transactions/init?phone=' . $_POST['phoneNumber'] . '&amount=' . $amount . '&return=' . $actual_link . '&merchant=' . $api_key);
   }
 }
 
-if(isset($_GET['status']) && $_GET['status'] == 'failed'){
-  $error = "Sorry your transaction has failed, transaction ID was ". $_GET['tnx'];
+if (isset($_GET['status']) && $_GET['status'] == 'failed') {
+  $error = "Sorry your transaction has failed, transaction ID was " . $_GET['tnx'];
 }
 
-if(isset($_GET['status']) && $_GET['status'] == 'success'){
-  if(isset($_SESSION['amount'])){
+if (isset($_GET['status']) && $_GET['status'] == 'success') {
+  if (isset($_SESSION['amount'])) {
     $donation_data->totalReceived = $donation_data->totalReceived + $_SESSION['amount'];
     file_put_contents(__DIR__ . "/data/donation.json", json_encode($donation_data));
   }
@@ -91,7 +91,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
 <body>
 
   <!-- ======= Header ======= -->
-  <?php include 'includes/header.php'?>
+  <?php include 'includes/header.php' ?>
   <!-- End Header -->
 
   <main id="main">
@@ -123,7 +123,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
               <div>
                 <p
                   class="overflow-visible fs-1 mb-0 fw-bold animate__animated  animate__pulse animate__infinite animate__slow">
-                  <?php echo $donation_data->symbol . " " . number_format( $donation_data->totalReceived); ?>
+                  <?php echo $donation_data->symbol . " " . number_format($donation_data->totalReceived); ?>
                 </p>
 
               </div>
@@ -131,18 +131,18 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
           </div>
         </div>
 
-        <?php if(isset($error)){?>
-        <div class="alert alert-danger mt-3" role="alert">
-  <?php echo $error; ?>
-</div>
-<?php }?>
+        <?php if (isset($error)) { ?>
+          <div class="alert alert-danger mt-3" role="alert">
+            <?php echo $error; ?>
+          </div>
+        <?php } ?>
 
 
-<?php if(isset($success)){?>
-        <div class="alert alert-success mt-3" role="alert">
-  <?php echo $success; ?>
-</div>
-<?php }?>
+        <?php if (isset($success)) { ?>
+          <div class="alert alert-success mt-3" role="alert">
+            <?php echo $success; ?>
+          </div>
+        <?php } ?>
 
         <div class="row mt-5">
 
@@ -156,7 +156,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
 
             <h5>Donation Form</h5>
 
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" role="form" >
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" role="form">
               <div class="row mb-3">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -165,7 +165,8 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="col-12 mt-3">
-                  <input type="number" class="form-control" name="phoneNumber" placeholder="Phone Number for Mobile Money : 256..." required>
+                  <input type="number" class="form-control" name="phoneNumber"
+                    placeholder="Phone Number for Mobile Money : 256..." required>
                 </div>
               </div>
 
@@ -176,7 +177,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
                     <div class="form-check">
                       <input class="form-check-input" value="10000" type="radio" name="amount">
                       <label class="form-check-label">
-                        <?php echo $donation_data->symbol;?> 10,000
+                        <?php echo $donation_data->symbol; ?> 10,000
                       </label>
                     </div>
                   </div>
@@ -184,7 +185,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
                     <div class="form-check">
                       <input class="form-check-input" value="50000" type="radio" name="amount">
                       <label class="form-check-label">
-                        <?php echo $donation_data->symbol;?> 50,000
+                        <?php echo $donation_data->symbol; ?> 50,000
                       </label>
                     </div>
                   </div>
@@ -192,7 +193,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
                     <div class="form-check">
                       <input class="form-check-input" value="500000" type="radio" name="amount">
                       <label class="form-check-label">
-                        <?php echo $donation_data->symbol;?> 500,000
+                        <?php echo $donation_data->symbol; ?> 500,000
                       </label>
                     </div>
                   </div>
@@ -206,42 +207,43 @@ if(isset($_GET['status']) && $_GET['status'] == 'success'){
                 </div>
               </div>
 
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <h5>
                   Credit Card Information
                 </h5>
                 <div class="row">
                   <div class="col-6 ">
-<div class="form-group">
-<input placeholder="Credit Card Number" type="text" class="form-control " name="card-number">
+                    <div class="form-group">
+                      <input placeholder="Credit Card Number" type="text" class="form-control " name="card-number">
 
-</div>
-<div class="form-group mt-3">
-<input placeholder="Expiration Date format MM/YY" type="text" class="form-control"
-                      name="card-expiration">
-</div>
+                    </div>
+                    <div class="form-group mt-3">
+                      <input placeholder="Expiration Date format MM/YY" type="text" class="form-control"
+                        name="card-expiration">
+                    </div>
 
-                   
+
                   </div>
                   <div class="col-6 form-group">
-<div class="form-group">
-<input placeholder="CVV" type="number" class="form-control" name="card-cvv">
+                    <div class="form-group">
+                      <input placeholder="CVV" type="number" class="form-control" name="card-cvv">
 
-</div>
-<div class="form-group mt-3">
-<input placeholder="Billing Zip Code" type="number" class="form-control" name="card-zip">
+                    </div>
+                    <div class="form-group mt-3">
+                      <input placeholder="Billing Zip Code" type="number" class="form-control" name="card-zip">
 
-</div>
+                    </div>
 
                   </div>
                 </div>
 
 
+              </div> -->
+
+
+
+              <div class="text-center mt-5"><button type="submit" name="donate" class="btn btn-primary">Donate</button>
               </div>
-
-             
-
-              <div class="text-center mt-5"><button type="submit" name="donate" class="btn btn-primary">Donate</button></div>
             </form>
 
           </div>
