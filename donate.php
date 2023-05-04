@@ -162,7 +162,7 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
                 </div>
                 <div class="col-12 mt-3">
                   <input type="number" class="form-control" name="phoneNumber"
