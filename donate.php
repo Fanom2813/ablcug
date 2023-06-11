@@ -171,10 +171,10 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
               </div>
 
               <div class="row mb-3">
-                <div class="col-6 form-group mt-3 mt-md-0">
+                <div class="col">
                   <input type="email" required class="form-control" name="email" id="email" placeholder="Your Email">
                 </div>
-                <div class="col-6 mt-3">
+                <div class="col">
                   <input type="number" class="form-control" name="phone"
                     placeholder="Phone Number for Mobile Money : 256..." required>
                 </div>
