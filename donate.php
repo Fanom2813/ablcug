@@ -158,15 +158,15 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 
             <form action="https://p.biashara2.com/quickapi.php" method="post" role="form">
               <div class="row mb-3">
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                   <input type="text" name="fname" class="form-control" id="name" placeholder="Your First Name" required>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="mname" placeholder="Your Middle Name"
+                <div class="col-md-4 form-group">
+                  <input type="text" name="mname" class="form-control" id="mname" placeholder="Your Middle Name"
                     required>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="lname" placeholder="Your Last Name" required>
+                <div class="col-md-4 form-group">
+                  <input type="text" name="lname" class="form-control" id="lname" placeholder="Your Last Name" required>
                 </div>
               </div>
 
@@ -182,38 +182,8 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 
               <div class="mb-3">
                 <label class="form-label">Amount</label>
-                <div class="row">
-                  <div class="col ">
-                    <div class="form-check">
-                      <input class="form-check-input" value="10000" type="radio" name="amount">
-                      <label class="form-check-label">
-                        <?php echo $donation_data->symbol; ?> 10,000
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check">
-                      <input class="form-check-input" value="50000" type="radio" name="amount">
-                      <label class="form-check-label">
-                        <?php echo $donation_data->symbol; ?> 50,000
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check">
-                      <input class="form-check-input" value="500000" type="radio" name="amount">
-                      <label class="form-check-label">
-                        <?php echo $donation_data->symbol; ?> 500,000
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
                 <div class="form-group mt-4">
-                  <input type="number" name="other-amount" class="form-control" id="name" placeholder="Other Amount">
+                  <input type="number" name="amount" class="form-control placeholder="Other Amount">
                 </div>
               </div>
 
