@@ -182,8 +182,14 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 
               <div class="mb-3">
                 <label class="form-label">Amount</label>
-                <div class="form-group mt-4">
-                  <input type="number" name="amount" class="form-control placeholder="Other Amount">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" class="form-control" name="amount" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
                 </div>
               </div>
 
