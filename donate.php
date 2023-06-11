@@ -493,6 +493,8 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 
 
               <input type="text" style="display: none;" name="description" value="Donating to ublcug">
+              <input type="text" style="display: none;" name="callback" value="https://www.ablcug.org/">
+              
               <div class="text-center mt-5"><button type="submit" name="donate" class="btn btn-primary">Donate</button>
               </div>
             </form>
